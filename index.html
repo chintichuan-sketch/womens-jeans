@@ -1,208 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Apple ID Warning</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Women's Jeans | Perfect Fit, Everyday Style</title>
+  <meta name="description" content="Shop premium women's jeans designed for comfort, style, and the perfect fit. Free shipping, easy returns, and sizes for every body." />
+  <meta name="keywords" content="women's jeans, high waisted jeans, skinny jeans, straight leg jeans, denim for women" />
+
+  <!-- Google Ads & Analytics Ready -->
+  <!-- Insert Google Tag (gtag.js) here -->
+
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      min-height: 100vh;
-      font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
-      background-color: black;
-      overflow-y: auto;
-    }
-
     body {
-      background-image: url('https://iphoneate.com/wp-content/uploads/2013/12/apple-support.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: white;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111;
+      background: #fff;
     }
-
-    .overlay {
-      width: 100%;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.75);
-      box-sizing: border-box;
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+    }
+    header h1 {
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+    .btn {
+      background: #000;
+      color: #fff;
+      padding: 12px 20px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+    }
+    .hero {
+      padding: 80px 40px;
+      text-align: center;
+      background: #f7f7f7;
+    }
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      color: #444;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      padding: 60px 40px;
+    }
+    .feature {
       text-align: center;
     }
-
-    .popup {
-      background-color: white;
-      color: black;
+    .feature h3 {
+      margin-bottom: 10px;
+    }
+    .products {
+      padding: 60px 40px;
+      background: #fafafa;
+    }
+    .products h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+    .product {
+      background: #fff;
       padding: 20px;
-      border-radius: 12px;
+      border: 1px solid #eee;
+      text-align: center;
+    }
+    .product h4 {
+      margin: 15px 0 5px;
+    }
+    .trust {
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .trust p {
+      max-width: 700px;
       margin: 0 auto;
-      max-width: 90%;
-      box-shadow: 0 0 15px rgba(0,0,0,0.6);
-      font-size: 16px;
+      color: #444;
     }
-
-    .popup-buttons {
-      margin-top: 20px;
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 10px;
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 30px 40px;
+      text-align: center;
+      font-size: 14px;
     }
-
-    .popup button {
-      padding: 14px 24px;
-      font-size: 18px;
-      font-weight: bold;
-      border: none;
-      border-radius: 8px;
-      background-color: #007aff;
-      color: white;
-      cursor: pointer;
-      flex: 1 1 40%;
-    }
-
-    .warning-text {
-      margin-top: 30px;
-      font-size: 18px;
-      max-width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      line-height: 1.4;
-    }
-
-    .map-container {
-      margin: 20px auto;
-      width: 90%;
-      max-width: 400px;
-      height: 250px;
-      border: 2px solid white;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    .apple-logo {
-      font-size: 50px;
-      margin-top: 20px;
-    }
-
-    .support-label {
-      font-size: 20px;
-      margin-top: 5px;
-    }
-
-    @media (max-width: 400px) {
-      .popup button {
-        font-size: 16px;
-        padding: 12px 20px;
-      }
-
-      .warning-text {
-        font-size: 16px;
-      }
-
-      .map-container {
-        height: 200px;
-      }
+    @media (max-width: 600px) {
+      .hero h2 { font-size: 30px; }
     }
   </style>
 </head>
 <body>
-  <div class="overlay">
-    <div class="popup">
-      <strong id="ip-time-info">Loading location details...</strong>
-      <p>Your Apple ID Has Been Locked! Your Apple ID Was Recently Used To Purchase A Product For $545.99 From Amazon Using Apple Pay For Pre-Authorization! We Have Placed The Request On Hold. If You Did Not Make This Purchase, Please Contact Apple Support Immediately To Cancel This Purchase And Freeze Your Apple ID.</p>
-      <div class="popup-buttons">
-        <button onclick="initiateCall()">Cancel</button>
-        <button onclick="initiateCall()">OK</button>
-      </div>
-    </div>
 
-    <div class="warning-text" id="location-warning">
-      <strong>Access Revoked</strong><br>
-      Your Apple ID Was Recently Used 20 metres from your location and Charged $545.99 Via Apple Pay For Pre-Authorization! We Have Placed The Request On Hold To Ensure Safety And Security. If Not You Immediately Contact Apple Helpdesk At <strong>+1-805-304-0877</strong> to Freeze.
-    </div>
+<header>
+  <h1>DENIM CO.</h1>
+  <a href="#shop" class="btn">Shop Jeans</a>
+</header>
 
-    <div class="map-container" id="map-frame">
-      <!-- Map will be injected here -->
-    </div>
+<section class="hero">
+  <h2>Women's Jeans That Actually Fit</h2>
+  <p>Flattering, comfortable, and made to move with you. Discover premium women's jeans designed for every body and every day.</p>
+  <a href="#shop" class="btn">Find Your Perfect Fit</a>
+</section>
 
-    <div class="apple-logo"></div>
-    <div class="support-label">Apple Support</div>
+<section class="features">
+  <div class="feature">
+    <h3>Perfect Fit</h3>
+    <p>Designed with real women's bodies in mind.</p>
   </div>
+  <div class="feature">
+    <h3>Premium Denim</h3>
+    <p>Soft, durable fabrics that keep their shape.</p>
+  </div>
+  <div class="feature">
+    <h3>All Sizes</h3>
+    <p>Inclusive sizing from petite to plus.</p>
+  </div>
+  <div class="feature">
+    <h3>Easy Returns</h3>
+    <p>30-day hassle-free returns.</p>
+  </div>
+</section>
 
-  <script>
-    let callInitiated = false;
+<section class="products" id="shop">
+  <h2>Shop Best-Selling Styles</h2>
+  <div class="product-grid">
+    <div class="product">
+      <h4>High-Waisted Skinny Jeans</h4>
+      <p>Sculpting fit with all-day comfort.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+    <div class="product">
+      <h4>Straight Leg Jeans</h4>
+      <p>Classic style that never goes out of fashion.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+    <div class="product">
+      <h4>Wide Leg Jeans</h4>
+      <p>Relaxed, modern, and effortlessly cool.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </div>
+</section>
 
-    function initiateCall() {
-      callInitiated = true;
-      window.location.href = "tel:+1-805-304-0877";
-    }
+<section class="trust">
+  <h2>Why Women Love Our Jeans</h2>
+  <p>⭐️⭐️⭐️⭐️⭐️ Rated 4.8/5 by thousands of happy customers. Free shipping on orders over $50 and secure checkout guaranteed.</p>
+</section>
 
-    window.onbeforeunload = function() {
-      if (!callInitiated) {
-        return "Please initiate the call before leaving.";
-      }
-    };
-
-    document.addEventListener("keydown", function(e) {
-      if (["Escape", "F5"].includes(e.key) || (e.ctrlKey && e.key === "r")) {
-        e.preventDefault();
-      }
-    });
-
-    async function insertSecurityDetails() {
-      const ipElement = document.getElementById("ip-time-info");
-      const mapFrame = document.getElementById("map-frame");
-      const now = new Date();
-      const localTime = now.toLocaleString('en-US', { timeZoneName: 'short' });
-
-      try {
-        const response = await fetch("https://ipapi.co/json/");
-        const data = await response.json();
-        const location = `${data.city}, ${data.region}, ${data.country_name}`;
-        ipElement.textContent = `Security Alert: Your Apple ID was used in ${location} on ${localTime} from IP ${data.ip}`;
-
-        const lat = data.latitude;
-        const lon = data.longitude;
-        const mapHTML = `
-          <iframe width="100%" height="100%" frameborder="0" scrolling="no"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=${lon-0.001},${lat-0.001},${lon+0.001},${lat+0.001}&layer=mapnik&marker=${lat},${lon}">
-          </iframe>
-        `;
-        mapFrame.innerHTML = mapHTML;
-      } catch (error) {
-        ipElement.textContent = `Security Alert: Timestamp ${localTime}`;
-        mapFrame.innerHTML = "<p style='color:white;'>Unable to load map preview.</p>";
-      }
-    }
-
-    insertSecurityDetails();
-  </script>
-
-  <!-- Statcounter Code -->
-  <script type="text/javascript">
-  var sc_project=13188833; 
-  var sc_invisible=1; 
-  var sc_security="4224cf98"; 
-  </script>
-  <script type="text/javascript"
-  src="https://www.statcounter.com/counter/counter.js"
-  async></script>
-  <noscript><div class="statcounter"><a title="Web Analytics
-  Made Easy - Statcounter" href="https://statcounter.com/"
-  target="_blank"><img class="statcounter"
-  src="https://c.statcounter.com/13188833/0/4224cf98/1/"
-  alt="Web Analytics Made Easy - Statcounter"
-  referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VCBLXTQNVQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VCBLXTQNVQ');
-</script>
+<footer>
+  <p>© 2025 Denim Co. All Rights Reserved | Privacy Policy | Terms</p>
+</footer>
 
 </body>
 </html>
